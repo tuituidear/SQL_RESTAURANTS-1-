@@ -6,7 +6,7 @@ DELETE FROM order_record;
 
 DELETE FROM menu;
 
-DELETE FROM payment;
+DELETE FROM order_menu_record;
 
 
 DROP TABLE  customer_account;
@@ -17,4 +17,4 @@ DROP TABLE  employee;
 
 DROP TABLE order_record;
 
-DROP TABLE payment;
+DROP TABLE order_menu_record;

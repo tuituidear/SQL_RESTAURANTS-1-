@@ -1,22 +1,20 @@
 CREATE TABLE order_record (
-    orderID text PRIMARY KEY,
-    menuID text,
-    cu_ID text,
-    ordertime TIME,
-    E_ID text,
+    orderID int PRIMARY KEY,
+    cu_ID int,
+    ordertime datetime,
+    E_ID varchar(6),
     FOREIGN KEY (cu_ID) REFERENCES customer_account (cu_ID),
-    FOREIGN KEY (E_ID) REFERENCES employee(E_ID),
-    FOREIGN KEY (menuID) REFERENCES menu(menuID)
+    FOREIGN KEY (E_ID) REFERENCES employee(E_ID)
 );
 
-INSERT INTO order_record (orderID, menuID, cu_ID, ordertime, E_ID) VALUES 
-('01','1','1001', '08:00', 'E_3'),
-('02','6','1002','08:30','E_6'),
-('03','10','1003', '09:00', 'E_3'),
-('04','11','1004','10:30','E_7'),
-('05','17','1005', '11:10', 'E_7'),
-('06','7','1006','13:10','E_8'),
-('07','5','1007', '17:50', 'E_9'),
-('08','12','1008','19:20','E_10'),
-('09','15','1009', '21:10', 'E_10'),
-('10','18','1010','22:40','E_7');
+INSERT INTO order_record (orderID, cu_ID, ordertime, E_ID) VALUES 
+(1,1001, '2022-12-03 08:00', 'E_03'),
+(2,1002,'2022-12-03 08:30','E_06'),
+(3,1003, '2022-12-03 09:00', 'E_03'),
+(4,1004,'2022-12-03 10:30','E_07'),
+(5,1005, '2022-12-03 11:10', 'E_07'),
+(6,1006,'2022-12-03 13:10','E_08'),
+(7,1007, '2022-12-03 17:50', 'E_08'),
+(8,1008,'2022-12-03 19:20','E_10'),
+(9,1009, '2022-12-03 19:30', 'E_10'),
+(10,1010,'2022-12-03 20:00','E_07');

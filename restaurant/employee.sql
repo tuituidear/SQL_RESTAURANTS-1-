@@ -1,6 +1,6 @@
 CREATE TABLE employee (
-    E_ID text PRIMARY KEY,
-    type text,
+    E_ID varchar(6) PRIMARY KEY,
+    type varchar(200),
     salary int
 );
 

@@ -10,11 +10,14 @@
 
 .read restaurant/order_record.sql
 
-.read restaurant/payment.sql
+.read restaurant/order_menu_record.sql
+    
 
 
 .mode table 
 .read restaurant/script.sql
+
+.read restaurant/script02.sql
     
 --2--
 .open SUBQUERY/chinook.db
